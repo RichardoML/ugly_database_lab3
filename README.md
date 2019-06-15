@@ -11,5 +11,4 @@
 
 所以决定修改成：点击按钮再查询。
 
-Main branch是原版的。自动查询
-alittlemorebeautiful branch是按照上述思路修改过的。
+
