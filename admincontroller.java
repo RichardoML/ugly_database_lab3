@@ -11,7 +11,7 @@ import java.util.ResourceBundle;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import application.readercontroller.bookquerylistener;
+//import application.readercontroller.bookquerylistener;
 import javafx.collections.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.util.regex.Pattern;
@@ -72,6 +72,8 @@ import java.util.regex.Matcher
 	
 	@FXML
 	private Button bookdowndownbutton;
+	@FXML
+	private Button bookdownquerybutton;
 	
 	private ObservableList<bookinfo> bookdowndata = FXCollections.observableArrayList();
 	//书籍查询
@@ -85,6 +87,8 @@ import java.util.regex.Matcher
 	private TextField bookquerypresstextfield;
 	@FXML
 	private RadioButton bookqueryfreeradiobutton;
+	@FXML
+	private Button bookqueryquerybutton;
 	
 	@FXML
 	private TableView<bookinfo> bookquerytableview;
@@ -120,6 +124,8 @@ import java.util.regex.Matcher
 	private TableColumn<?,?> readeroutcolumnreaderid,readeroutcolumnreadername,readeroutcolumnsex;
 	@FXML
 	private Button readeroutoutbutton;
+	@FXML
+	private Button readeroutquerybutton;
 	
 	private ObservableList<readerinfo> readerdowndata = FXCollections.observableArrayList();
 	//修改读者信息
@@ -351,20 +357,20 @@ import java.util.regex.Matcher
 				readeroutcolumnsex.setCellValueFactory(new PropertyValueFactory<>("sex"));
 				readerouttableview.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 				//旧书下架的动态处理，动态改变表格中的显示
-				bookdownbookidtextfield.textProperty().addListener(new bookdownlistener<String>());
-				bookdownbooknametextfield.textProperty().addListener(new bookdownlistener<String>());
-				bookdownauthortextfield.textProperty().addListener(new bookdownlistener<String>());
-				bookdownclasstextfield.textProperty().addListener(new bookdownlistener<String>());
-				bookdownpresstextfield.textProperty().addListener(new bookdownlistener<String>());
-				//注销读者的动态处理，输入变化，表格也变化
+//				bookdownbookidtextfield.textProperty().addListener(new bookdownlistener<String>());
+//				bookdownbooknametextfield.textProperty().addListener(new bookdownlistener<String>());
+//				bookdownauthortextfield.textProperty().addListener(new bookdownlistener<String>());
+//				bookdownclasstextfield.textProperty().addListener(new bookdownlistener<String>());
+//				bookdownpresstextfield.textProperty().addListener(new bookdownlistener<String>());
+//				//注销读者的动态处理，输入变化，表格也变化
 				readeroutreaderidtextfield.textProperty().addListener(new readeroutlistener<String>());
-				readeroutreadernametextfield.textProperty().addListener(new readeroutlistener<String>());
+				//readeroutreadernametextfield.textProperty().addListener(new readeroutlistener<String>());
 				//书籍查询的动态处理，根据文本框中的输入改变来自动改变表格中的内容
-				 bookquerybooknametextfield.textProperty().addListener(new bookquerylistener<String>());
-				 bookqueryclasstextfield.textProperty().addListener(new bookquerylistener<String>());
-				 bookquerypresstextfield.textProperty().addListener(new bookquerylistener<String>());
-				 bookqueryauthortextfield.textProperty().addListener(new bookquerylistener<String>());
-			
+//				 bookquerybooknametextfield.textProperty().addListener(new bookquerylistener<String>());
+//				 bookqueryclasstextfield.textProperty().addListener(new bookquerylistener<String>());
+//				 bookquerypresstextfield.textProperty().addListener(new bookquerylistener<String>());
+//				 bookqueryauthortextfield.textProperty().addListener(new bookquerylistener<String>());
+//			
 				 //罚单的动态处理，读者ID变化，动态改变表格内容
 				 pulishreaderidtextfield.textProperty().addListener(new pulishlistener<String>());
 				 //借还书的动态处理，根据输入的reader id来改变表格中的内容
@@ -506,15 +512,15 @@ import java.util.regex.Matcher
 		}
 	}
 	
-	class bookdownlistener<T> implements ChangeListener<T>
-	{
-		@Override
-		public void changed(ObservableValue <? extends T> a, T old, T n)
-		{
-			bookdownquery();
-		}
-	}
-	
+//	class bookdownlistener<T> implements ChangeListener<T>
+//	{
+//		@Override
+//		public void changed(ObservableValue <? extends T> a, T old, T n)
+//		{
+//			bookdownquery();
+//		}
+//	}
+//	
 
 	public void bookdown()
 	{
@@ -605,15 +611,15 @@ import java.util.regex.Matcher
 		}
 	}
 	
-	class bookquerylistener<T> implements ChangeListener<T>
-	{
-		@Override
-		public void changed(ObservableValue <? extends T> a, T old, T n)
-		{
-			bookquery();
-		}
-	}
-	
+//	class bookquerylistener<T> implements ChangeListener<T>
+//	{
+//		@Override
+//		public void changed(ObservableValue <? extends T> a, T old, T n)
+//		{
+//			bookquery();
+//		}
+//	}
+//	
 	public void pwdconsistent()
 	{
 		
