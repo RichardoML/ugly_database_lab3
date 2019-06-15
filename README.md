@@ -18,3 +18,6 @@
 readercontroller的 书籍查询：所有textfield上的listener都要去掉，加上一个按钮
 admincontroller的 旧书下架，书籍查询以及读者注销。
   旧书下架以及书籍查询需要将所有textfield上的listener去掉，而读者注销只需要将 名字 输入框上的listener去掉，再加上一个按钮就好了。
+
+Main branch是原版的。自动查询
+alittlemorebeautiful branch是按照上述思路修改过的。
