@@ -50,6 +50,8 @@ public class readercontroller implements Initializable
 	@FXML
 	private RadioButton bookqueryfreeradiobutton;
 	@FXML
+	private Button bookqueryquerybutton;
+	@FXML
 	private TableView<bookinfo> bookquerytable;
 	@FXML
 	private TableColumn<?,?> bookquerycolumnbookid,bookquerycolumnbookname;
@@ -264,11 +266,11 @@ public class readercontroller implements Initializable
 			renewtable.setItems(renewdata);
 			renewtable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 			//书籍查询动态处理
-			bookquerybooknametextfield.textProperty().addListener(new bookquerylistener<String>());
-			bookqueryauthortextfield.textProperty().addListener(new bookquerylistener<String>());
-			bookqueryclasstextfield.textProperty().addListener(new bookquerylistener<String>());
-			bookquerypresstextfield.textProperty().addListener(new bookquerylistener<String>());
-			//bookqueryfreeradiobutton.textProperty().addListener(new bookquerylistener<String>());不能实现radiobutton变化就调用函数
+//			bookquerybooknametextfield.textProperty().addListener(new bookquerylistener<String>());
+//			bookqueryauthortextfield.textProperty().addListener(new bookquerylistener<String>());
+//			bookqueryclasstextfield.textProperty().addListener(new bookquerylistener<String>());
+//			bookquerypresstextfield.textProperty().addListener(new bookquerylistener<String>());
+//			//bookqueryfreeradiobutton.textProperty().addListener(new bookquerylistener<String>());不能实现radiobutton变化就调用函数
 			//bookqueryfreeradiobutton.selectedProperty().addListener(new ChangeListener<Toggle>();
 //			group = new ToggleGroup();
 //			bookqueryfreeradiobutton.setToggleGroup(group);
@@ -412,12 +414,12 @@ public class readercontroller implements Initializable
 		}
 	}
 	
-	class bookquerylistener<T> implements ChangeListener<T>
-	{
-		 @Override
-		  public void changed(ObservableValue <? extends T> a, T old, T n) 
-		 {
-			 querybook();
-		 }
-	}
+//	class bookquerylistener<T> implements ChangeListener<T>
+//	{
+//		 @Override
+//		  public void changed(ObservableValue <? extends T> a, T old, T n) 
+//		 {
+//			 querybook();
+//		 }
+//	}
 }
