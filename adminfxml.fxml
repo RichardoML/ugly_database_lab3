@@ -57,11 +57,12 @@
                                     <Label layoutX="18.0" layoutY="47.0" text="类别：" />
                                     <Label layoutX="166.0" layoutY="47.0" text="出版社：" />
                                     <Label layoutX="415.0" layoutY="7.0" text="作者：" />
-                                    <TextField fx:id="bookdownbookidtextfield" layoutX="63.0" layoutY="2.0" prefHeight="30.0" prefWidth="88.0" />
-                                    <TextField fx:id="bookdownbooknametextfield" layoutX="211.0" layoutY="2.0" prefHeight="30.0" prefWidth="196.0" />
-                                    <TextField fx:id="bookdownauthortextfield" layoutX="454.0" layoutY="2.0" prefHeight="30.0" prefWidth="104.0" />
-                                    <TextField fx:id="bookdownclasstextfield" layoutX="57.0" layoutY="42.0" prefHeight="30.0" prefWidth="99.0" />
-                                    <TextField fx:id="bookdownpresstextfield" layoutX="224.0" layoutY="42.0" />
+                                    <TextField fx:id="bookdownbookidtextfield" layoutX="63.0" layoutY="2.0" prefHeight="30.0" prefWidth="88.0" promptText="所有" />
+                                    <TextField fx:id="bookdownbooknametextfield" layoutX="211.0" layoutY="2.0" prefHeight="30.0" prefWidth="196.0" promptText="所有" />
+                                    <TextField fx:id="bookdownauthortextfield" layoutX="454.0" layoutY="2.0" prefHeight="30.0" prefWidth="104.0" promptText="所有" />
+                                    <TextField fx:id="bookdownclasstextfield" layoutX="57.0" layoutY="42.0" prefHeight="30.0" prefWidth="99.0" promptText="所有" />
+                                    <TextField fx:id="bookdownpresstextfield" layoutX="224.0" layoutY="42.0" promptText="所有" />
+                                    <Button fx:id="bookdownquerybutton" layoutX="460.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#bookdownquery" text="查询" />
                                  </children>
                               </AnchorPane>
                            </content>
@@ -90,6 +91,7 @@
                                           <TableColumn fx:id="bookquerycolumnfree" prefWidth="75.0" text="是否空闲" />
                                       </columns>
                                     </TableView>
+                                    <Button fx:id="bookqueryquerybutton" layoutX="426.0" layoutY="40.0" mnemonicParsing="false" onMouseClicked="#bookquery" text="查询" />
                                  </children>
                               </AnchorPane>
                           </content>
@@ -128,7 +130,7 @@
                                  <children>
                                     <Label layoutX="12.0" layoutY="14.0" text="读者ID：" />
                                     <TextField fx:id="readeroutreaderidtextfield" layoutX="93.0" layoutY="14.0" />
-                                    <TextField fx:id="readeroutreadernametextfield" layoutX="384.0" layoutY="14.0" />
+                                    <TextField fx:id="readeroutreadernametextfield" layoutX="348.0" layoutY="14.0" prefHeight="30.0" prefWidth="91.0" />
                                     <Label layoutX="303.0" layoutY="19.0" text="姓名：" />
                                     <Button fx:id="readeroutoutbutton" layoutX="275.0" layoutY="263.0" mnemonicParsing="false" onMouseClicked="#readerout" text="注销" />
                                     <TableView fx:id="readerouttableview" layoutY="54.0" prefHeight="200.0" prefWidth="600.0">
@@ -138,6 +140,7 @@
                                           <TableColumn fx:id="readeroutcolumnsex" prefWidth="119.0" text="读者性别" />
                                       </columns>
                                     </TableView>
+                                    <Button fx:id="readeroutquerybutton" layoutX="469.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#readeroutquery" text="查询" />
                                  </children>
                               </AnchorPane>
                         </content>
